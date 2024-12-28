@@ -11,19 +11,19 @@ export const Button = ({
   if (isLoading) {
     return (
       <button
-        className={`flex items-center gap-[1vw] opacity-95 ${cn} `}
+        className={`flex items-center gap-[1vw] opacity-95 cursor-not-allowed  ${cn} `}
         aria-label={label}
         disabled
         onClick={onClick}
       >
         <LoaderCircle className="animate-spin" />
-        Wait Loading...
+        {children}
       </button>
     );
   }
   return (
     <button
-      className={`flex items-center gap-[1vw] ${cn}`}
+      className={`flex items-center gap-[1vw] active:scale-90 duration-300 transition-all ${cn}`}
       aria-label={label}
       disabled={disabled}
       onClick={onClick}

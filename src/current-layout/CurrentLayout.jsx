@@ -1,4 +1,5 @@
 import { Footer, Navbar } from "../components";
+import { AboutSection, HomeSection, Services } from "../section";
 
 export const CurrentLayout = () => {
   return (
@@ -6,8 +7,10 @@ export const CurrentLayout = () => {
       <header className="flex items-center justify-center">
         <Navbar />
       </header>
-      <main className="mt-[120px] h-[10000vh]">
-        <h1>Hello World</h1>
+      <main className="mt-[120px] ">
+        <HomeSection />
+        <AboutSection />
+        <Services />
       </main>
       <footer>
         <Footer />

@@ -41,7 +41,7 @@ export const Navbar = () => {
   return (
     <nav
       className={
-        "fixed top-3 left-1/2 transform -translate-x-1/2  w-[95vw] sm:w-[80vw] bg-[#F2F0E3] bg-opacity-90 border border-[#202020] shadow-md z-50 p-4 rounded-xl flex justify-between items-center "
+        "fixed top-3 left-1/2 transform -translate-x-1/2  w-[95vw] sm:w-[80vw] bg-[#F2F0E3] bg-opacity-95 border border-[#202020] shadow-md z-50 p-4 rounded-xl flex justify-between items-center "
       }
     >
       <div className="w-[10vw] ">
@@ -52,12 +52,12 @@ export const Navbar = () => {
               : "archivo text-3xl font-bold  animate-slideOut"
           }
         >
-          {hasScrolled ? "SZ." : "Soluzion."}
+          {hasScrolled ? "Sz." : "Soluzion."}
         </h1>
       </div>
 
       {/* Desktop Nav */}
-      <ul className="items-center gap-[1.3vw] inter hidden sm:flex">
+      <ul className="items-center gap-[1.5vw] inter hidden sm:flex">
         {ROUTES.map((route) => (
           <li key={route.id}>
             <a
@@ -74,9 +74,9 @@ export const Navbar = () => {
       <div
         className={`fixed inset-0 bg-[#202020] text-white flex flex-col items-center justify-center ${
           isMobileNavOpen
-            ? "animate-slideIn opacity-100"
-            : "opacity-0 pointer-events-none "
-        } z-50`}
+            ? "opacity-100 visible animate-slideIn" // When open, make sure it's fully visible
+            : "opacity-0 pointer-events-none invisible" // When closed, hide the nav
+        } z-50 h-screen rounded-lg shadow-lg`} // Ensure the nav takes up the entire height of the screen
       >
         {/* Close Button */}
         <button
