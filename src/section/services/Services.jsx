@@ -120,7 +120,10 @@ export const Services = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center gap-[4vh] min-h-[calc(100vh-120px)] mb-[4vh] p-4" id="#services">
+    <section
+      className="flex flex-col items-center justify-center gap-[4vh] min-h-[calc(100vh-120px)] mb-[10vh] p-4"
+      id="#services"
+    >
       <div className="flex flex-col gap-[1vh] max-w-6xl w-full">
         <Heading level={1} cn="text-4xl md:text-5xl">
           Services We Offer.

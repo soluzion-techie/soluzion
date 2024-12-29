@@ -1,5 +1,10 @@
 import { Footer, Navbar } from "../components";
-import { AboutSection, HomeSection, Services } from "../section";
+import {
+  AboutSection,
+  ContactSection,
+  HomeSection,
+  Services,
+} from "../section";
 
 export const CurrentLayout = () => {
   return (
@@ -11,6 +16,7 @@ export const CurrentLayout = () => {
         <HomeSection />
         <AboutSection />
         <Services />
+        <ContactSection />
       </main>
       <footer>
         <Footer />

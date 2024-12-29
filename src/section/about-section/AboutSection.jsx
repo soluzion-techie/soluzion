@@ -26,7 +26,7 @@ export const AboutSection = () => {
     },
   ];
   return (
-    <Section id={"about"} cn={"justify-around gap-6 bg-[#20202029] w-full"}>
+    <Section id={"about"} cn={"justify-around gap-6  w-full"}>
       <div className="w-full max-w-3xl flex flex-col gap-4 items-start">
         <Heading level={1} cn={"text-5xl "}>
           Who We Are.
