@@ -3,6 +3,7 @@ import {
   AboutSection,
   ContactSection,
   HomeSection,
+  ProjectSection,
   Services,
 } from "../section";
 
@@ -12,10 +13,11 @@ export const CurrentLayout = () => {
       <header className="flex items-center justify-center">
         <Navbar />
       </header>
-      <main className="mt-[120px] ">
+      <main className="">
         <HomeSection />
         <AboutSection />
         <Services />
+        <ProjectSection />
         <ContactSection />
       </main>
       <footer>

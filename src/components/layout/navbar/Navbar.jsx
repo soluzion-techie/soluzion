@@ -40,9 +40,9 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={
-        "fixed top-3 left-1/2 transform -translate-x-1/2  w-[95vw] sm:w-[80vw] bg-[#F2F0E3] bg-opacity-95 border border-[#202020] shadow-md z-50 p-4 rounded-xl flex justify-between items-center "
-      }
+      className={`fixed top-3 left-1/2 transform -translate-x-1/2  w-[95vw] sm:w-[80vw] bg-[#F2F0E3] bg-opacity-95 border border-[#202020] shadow-md z-50 p-4 rounded-xl flex justify-between items-center ${
+        hasScrolled ? "box duration-200 ease-in" : "duration-200 ease-out"
+      }`}
     >
       <div className="w-[10vw] ">
         <h1
@@ -105,7 +105,10 @@ export const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-[1.3vw]">
-        <Button label="Get Started" cn="bg-[#202020] text-white rounded-lg p-2">
+        <Button
+          label="Get Started"
+          cn="bg-[#202020] text-white rounded-lg px-3 py-2"
+        >
           Get Started <MoveRight size={20} />
         </Button>
         <Button

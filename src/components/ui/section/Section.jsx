@@ -5,7 +5,7 @@ export const Section = ({ children, label, onClick, cn, id }) => {
     <section
       aria-label={label}
       onClick={onClick}
-      className={`flex flex-col sm:gap-0 sm:flex-row items-center justify-around sm:justify-center min-h-[calc(100vh-120px)] mb-[8vh] p-4 ${cn}`}
+      className={`flex flex-col sm:gap-0 sm:flex-row items-center justify-around sm:justify-center min-h-screen p-4 ${cn}`}
       id={`#${id}`}
     >
       {children}

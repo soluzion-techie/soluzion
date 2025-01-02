@@ -1,13 +1,13 @@
 import { MoveRight } from "lucide-react";
 import snow from "../../assets/large-snow.gif";
 import { Button } from "../../components/ui/button/Button";
-import heroSectionImage from "../../assets/building.svg";
+import heroSectionImage from "../../assets/browser.png";
 import { Heading, Paragraph, Section } from "../../components";
 
 export const HomeSection = () => {
   return (
-    <Section label={"Home Section"} id={"home"}>
-      <div className="flex flex-col gap-[2vh] w-full sm:w-[50%]">
+    <Section label={"Home Section"} id={"home"} cn={"flex-col"}>
+      <div className="flex flex-col gap-2 sm:gap-[2vh] w-full max-w-5xl ">
         <p
           className="bg-[#202020] text-[#efefef] w-max p-2 rounded-lg shadow-lg inter relative overflow-hidden text-sm"
           style={{
@@ -28,9 +28,13 @@ export const HomeSection = () => {
         <Heading level={1} cn={"text-5xl sm:text-7xl"}>
           Innovating Your <span className="  ">Digital Future</span>.
         </Heading>
-        <Paragraph cn={"text-md sm:text-lg"}>
+        <Paragraph cn={"text-md sm:text-lg w-full sm:w-[50vw]"}>
           Clean, elegant code. Designs that stand out. Custom digital solutions
           crafted just for you—let’s build your vision today!
+        </Paragraph>
+        <Paragraph cn={"text-md sm:text-lg w-full sm:w-[50vw]"}>
+          From intuitive websites to dynamic mobile apps, we focus on delivering
+          exceptional quality that aligns with your vision.
         </Paragraph>
         <div className="flex gap-4 items-center flex-wrap">
           <Button
@@ -47,13 +51,13 @@ export const HomeSection = () => {
           </Button>
         </div>
       </div>
-      <div className="w-full sm:w-[50%] flex items-center justify-center">
+      {/* <div className="w-full max-w-6xl  flex items-center justify-center">
         <img
           src={heroSectionImage}
           alt=""
-          className="w-full h-auto object-contain"
+          className="w-[60vw] h-auto object-contain"
         />
-      </div>
+      </div> */}
     </Section>
   );
 };

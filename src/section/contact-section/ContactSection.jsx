@@ -1,50 +1,7 @@
-import { Instagram, MessageCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
 import { Button, Heading, Paragraph, Section } from "../../components";
-import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
-
-const SOCIAL_MEDIA = [
-  {
-    icon: <FaXTwitter />,
-    link: "https://twitter.com",
-  },
-  {
-    icon: <FaLinkedin />,
-    link: "https://linkedin.com",
-  },
-  {
-    icon: <Instagram />,
-    link: "https://instagram.com",
-  },
-];
-
-const FAQS = [
-  {
-    question: "What services do you offer?",
-    answer:
-      "We offer a range of services including web development, mobile app development, UX design, backend development, and content creation.",
-  },
-  {
-    question: "How long does it take to complete a project?",
-    answer:
-      "The timeline for a project depends on its complexity. Typically, small projects take 2-4 weeks, while larger projects may take several months.",
-  },
-  {
-    question: "Can you customize a project according to our needs?",
-    answer:
-      "Yes, we tailor every project to meet the specific needs and goals of our clients.",
-  },
-  {
-    question: "What is your pricing model?",
-    answer:
-      "Our pricing is project-based and depends on the scope and complexity of the work. Contact us for a detailed quote.",
-  },
-  {
-    question: "Do you provide post-launch support?",
-    answer:
-      "Yes, we offer post-launch support and maintenance to ensure your project runs smoothly.",
-  },
-];
+import { FAQS, SOCIAL_MEDIA } from "../../helpers/data/Data";
 
 export const ContactSection = () => {
   const [activeFaq, setActiveFaq] = useState(0);
@@ -54,10 +11,10 @@ export const ContactSection = () => {
   };
 
   return (
-    <Section>
+    <Section cn={"gap-[2vw] mb-0"}>
       <div className="w-full sm:w-[40vw] p-2">
         <div className="flex flex-col items-start justify-between gap-4 ">
-          <div className="flex gap-4 ">
+          <div className="flex gap-[1vw] ">
             <div>
               <span className="flex items-center justify-center">
                 <MessageCircle
@@ -76,7 +33,7 @@ export const ContactSection = () => {
               <Paragraph cn={"text-sm font-bold leading-none"}>
                 <a
                   href="mailto:soluzion.tech@gmail.com"
-                  className="text-[#202020]"
+                  className="text-[#202020] underline"
                 >
                   soluzion.tech@gmail.com
                 </a>
@@ -93,14 +50,16 @@ export const ContactSection = () => {
               {FAQS.map((faq, index) => (
                 <div
                   key={index}
-                  className="border border-[#202020] rounded-lg p-4 cursor-pointer"
+                  className="border border-[#202020] rounded-lg p-4 cursor-pointer duration-150 ease-in-out"
                   onClick={() => toggleFaq(index)}
                 >
                   <div className="flex items-center justify-between">
                     <Paragraph cn={"text-md font-bold"}>
                       {faq.question}
                     </Paragraph>
-                    <span>{activeFaq === index ? "-" : "+"}</span>
+                    <span>
+                      {activeFaq === index ? <ChevronDown /> : <ChevronUp />}
+                    </span>
                   </div>
                   {activeFaq === index && (
                     <Paragraph cn={"text-sm mt-2"}>{faq.answer}</Paragraph>
@@ -120,7 +79,7 @@ export const ContactSection = () => {
                 rel="noreferrer"
                 className="border flex items-center justify-center border-[#202020] w-[30px] h-[30px] sm:w-[3vw] p-1 sm:h-[5vh] rounded-lg m-auto  shadow-lg"
               >
-                {social.icon}
+                {<social.icon />}
               </a>
             ))}
           </div>
