@@ -1,7 +1,6 @@
 import { MoveRight } from "lucide-react";
 import snow from "../../assets/large-snow.gif";
 import { Button } from "../../components/ui/button/Button";
-import heroSectionImage from "../../assets/browser.png";
 import { Heading, Paragraph, Section } from "../../components";
 
 export const HomeSection = () => {

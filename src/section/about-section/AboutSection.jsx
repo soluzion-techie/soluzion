@@ -26,7 +26,7 @@ export const AboutSection = () => {
     },
   ];
   return (
-    <Section id={"about"} cn={"justify-around gap-6  w-full mb-[10vh]"}>
+    <Section id={"about"} cn={"justify-around  w-full mb-[10vh]"}>
       <div className="w-full max-w-3xl flex flex-col gap-4 items-start">
         <Heading level={1} cn={"text-5xl "}>
           Who We Are.
@@ -50,13 +50,12 @@ export const AboutSection = () => {
           Join us in shaping the digital future.
         </Button>
       </div>
-      <div className="w-full max-w-3xl">
+      <div className="">
         <div className="flex flex-col justify-start gap-4">
-          {CARD_DATA.map((card, index) => (
+          {CARD_DATA.map((card) => (
             <div
               key={card.id}
-              className={`w-[300px] border border-[#202020] p-4 transform transition-all duration-300 ease-in-out rounded-lg shadow-md
-        ${index === 1 ? "ml-auto" : ""} 
+              className={`w-full sm:w-[300px] border border-[#202020] p-4 transform transition-all duration-300 ease-in-out rounded-lg  box} 
         hover:scale-105 hover:shadow-lg flex flex-col gap-2`}
             >
               <span>{card.icon}</span>

@@ -1,7 +1,6 @@
 import { FOOTER_DATA } from "../../../helpers/data/Data";
 import { Button } from "../../ui/button/Button";
 import { Heading } from "../../ui/heading/Heading";
-import { Paragraph } from "../../ui/paragraph/Paragraph";
 import footerImg from "../../../assets/footer.svg";
 export const Footer = () => {
   return (
@@ -9,13 +8,13 @@ export const Footer = () => {
       {/* Newsletter Box */}
       <div className="w-full sm:w-[60vw] mx-auto bg-[#68666629] p-4 rounded-lg flex flex-col gap-[2vh] shadow-lg">
         <Heading level={2} cn="text-2xl sm:text-4xl">
-          Stay in the Loop with Soluzion Tech.
+          Stay in the Loop with Soluzion.
         </Heading>
-        <Paragraph cn="text-sm text-[#C2C6BD] ">
+        <p className="text-sm text-[#C2C6BD] ">
           Be the first to know about our latest projects, innovative solutions,
           and exciting updates. Subscribe to our newsletter and join our journey
           to transform the digital world!
-        </Paragraph>
+        </p>
         <div className="relative">
           <input
             type="text"
@@ -29,10 +28,10 @@ export const Footer = () => {
           >
             Subscribe
           </Button>
-          <Paragraph cn="text-xs text-[#C2C6BD] mt-1 ">
+          <p className="text-xs text-[#C2C6BD] mt-1 ">
             Don’t worry, we won’t spam your inbox. Only inspiring content,
             straight to your inbox!
-          </Paragraph>
+          </p>
         </div>
       </div>
 
@@ -42,9 +41,9 @@ export const Footer = () => {
           <Heading level={1} cn="text-7xl archivo">
             Soluzion.
           </Heading>
-          <Paragraph cn="text-sm text-[#C2C6BD] inter">
+          <p className="text-sm text-[#C2C6BD] inter">
             Think. Build. Transform.
-          </Paragraph>
+          </p>
         </div>
         <div className="flex gap-8 sm:gap-[4vw] flex-col sm:flex-row ">
           <div className="flex flex-wrap gap-12 sm:gap-[4vw]">
@@ -73,9 +72,9 @@ export const Footer = () => {
       </div>
       <div className="hidden sm:flex flex-col gap-[4vh] sm:gap-0 sm:flex-row items-center justify-between w-full">
         <div className="self-end">
-          <Paragraph cn="text-[#C2C6BD]">
+          <p className="text-[#C2C6BD]">
             Created with ❤️ by Soluzion Tech. All rights reserved.
-          </Paragraph>
+          </p>
         </div>
         <div className="inline-block">
           <img
